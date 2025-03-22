@@ -1,0 +1,80 @@
+[gd_scene load_steps=4 format=3 uid="uid://0du0ix85p0uj"]
+
+[ext_resource type="Texture2D" uid="uid://dscw72yo8b2bb" path="res://Image/Placeholder/guitare.png" id="1_fa0oo"]
+[ext_resource type="Texture2D" uid="uid://bv5efx0vvsxdk" path="res://Image/Placeholder/GradientFond_Blanc.png" id="1_fgt7c"]
+[ext_resource type="PackedScene" uid="uid://df1siam7f2i50" path="res://Scenes/sound_but.tscn" id="2_v2nbq"]
+
+[node name="Guitare" type="TextureRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.220711, 0.0319232, 0.328815, 1)
+layout_mode = 0
+offset_left = 15.0
+offset_top = 2165.0
+offset_right = 1935.0
+offset_bottom = 3445.0
+rotation = -2.20929
+mouse_filter = 2
+texture = ExtResource("1_fgt7c")
+expand_mode = 1
+
+[node name="SoundBut" parent="." instance=ExtResource("2_v2nbq")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -11.0
+offset_top = 107.0
+offset_right = 1312.0
+offset_bottom = 142.0
+rotation = 0.967523
+note = 11
+
+[node name="SoundBut2" parent="." instance=ExtResource("2_v2nbq")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 22.0
+offset_top = 69.0
+offset_right = 1345.0
+offset_bottom = 104.0
+rotation = 0.967893
+note = 7
+
+[node name="SoundBut3" parent="." instance=ExtResource("2_v2nbq")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 50.0
+offset_top = 23.0
+offset_right = 1373.0
+offset_bottom = 58.0
+rotation = 0.96396
+note = 9
+
+[node name="SoundBut4" parent="." instance=ExtResource("2_v2nbq")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 91.0
+offset_top = -2.0
+offset_right = 1414.0
+offset_bottom = 33.0
+rotation = 0.962677
+note = 12
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
+texture = ExtResource("1_fa0oo")
