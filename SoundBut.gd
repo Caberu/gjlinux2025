@@ -6,7 +6,9 @@ class_name SoundBut extends TextureRect
 var on_button := false
 var played := false
 
-var alteration := []
+signal cliked
+
+var alteration := 0
 
 func _on_mouse_entered():
 	on_button = true
@@ -28,13 +30,7 @@ func  _process(delta):
 		played = false
 
 func click():
-	print(InstruSound.NOTE.keys()[note+get_alter()])
+	cliked.emit()
+	print(InstruSound.NOTE.keys()[note+alteration])
 	played = true
-	$AudioStreamPlayer.play_instru(note)
-
-func get_alter():
-	if (alteration.is_empty()): return 1;
-	var max = 0
-	for i in alteration:
-		max = max(max,i)
-	return max
+	$AudioStreamPlayer.play_instru(note+alteration)

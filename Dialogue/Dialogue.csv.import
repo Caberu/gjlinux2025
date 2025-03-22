@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://lunormryeliu"
+
+[deps]
+
+files=["res://Dialogue/Dialogue.Salut moi c octave BIATCH.translation"]
+
+source_file="res://Dialogue/Dialogue.csv"
+dest_files=["res://Dialogue/Dialogue.Salut moi c octave BIATCH.translation"]
+
+[params]
+
+compress=true
+delimiter=0
