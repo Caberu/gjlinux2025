@@ -1,20 +1,28 @@
-[gd_scene load_steps=8 format=3 uid="uid://b62gxsdw273if"]
+[gd_scene load_steps=15 format=3 uid="uid://b62gxsdw273if"]
 
-[ext_resource type="Texture2D" uid="uid://cxv1yoi20qexf" path="res://Image/Placeholder/BG_salleIntel.png" id="1_7pcc1"]
+[ext_resource type="Script" path="res://Scenes/cam.gd" id="1_vurcx"]
+[ext_resource type="Texture2D" uid="uid://brqq6k4s3yttf" path="res://Image/Backgrounds/BG_bar.png" id="1_xhbt4"]
 [ext_resource type="Texture2D" uid="uid://bv5efx0vvsxdk" path="res://Image/Placeholder/GradientFond_Blanc.png" id="2_amxcn"]
-[ext_resource type="Texture2D" uid="uid://hfvts5au82da" path="res://Image/Placeholder/Crush_san_Idle.png" id="3_rt4hw"]
+[ext_resource type="Texture2D" uid="uid://mwihfd112mvr" path="res://Image/Octave/octave_neutre.png" id="3_l1rmk"]
+[ext_resource type="Script" path="res://Scenes/dialogue_cadre.gd" id="4_e80t7"]
 [ext_resource type="PackedScene" uid="uid://0du0ix85p0uj" path="res://Scenes/guitare.tscn" id="4_v811h"]
 [ext_resource type="Script" path="res://Scenes/instrument_hand.gd" id="4_vkxo2"]
+[ext_resource type="Script" path="res://Scenes/personnage.gd" id="5_fhvro"]
 [ext_resource type="PackedScene" uid="uid://df1siam7f2i50" path="res://Scenes/sound_but.tscn" id="5_jfbqe"]
+[ext_resource type="Texture2D" uid="uid://dwrhyxotn354k" path="res://Image/portée.png" id="6_j4e7u"]
 [ext_resource type="Script" path="res://Scenes/dialogue_manager.gd" id="7_l0xq6"]
+[ext_resource type="Script" path="res://Scenes/bg_manager.gd" id="8_xkgb8"]
+[ext_resource type="Script" path="res://Scenes/chara_manager.gd" id="10_hd6h5"]
+[ext_resource type="Script" path="res://Scenes/fx_manager.gd" id="12_ycvk6"]
 
-[node name="Control" type="Control"]
+[node name="Cam" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_vurcx")
 
 [node name="BG" type="TextureRect" parent="."]
 layout_mode = 1
@@ -23,7 +31,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_7pcc1")
+texture = ExtResource("1_xhbt4")
 
 [node name="GradientBG" type="TextureRect" parent="."]
 modulate = Color(0.38441, 0.000480826, 0.483384, 1)
@@ -42,7 +50,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_rt4hw")
+texture = ExtResource("3_l1rmk")
+script = ExtResource("5_fhvro")
 
 [node name="GradientMid" type="TextureRect" parent="."]
 modulate = Color(0.652756, 0.234505, 0.489911, 0.533333)
@@ -54,6 +63,15 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_amxcn")
 
+[node name="Portée" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_j4e7u")
+
 [node name="DialogueCadre" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = -1
@@ -63,6 +81,7 @@ anchor_bottom = 1.0
 offset_top = -302.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("4_e80t7")
 
 [node name="Dialogue" type="RichTextLabel" parent="DialogueCadre"]
 layout_mode = 1
@@ -74,21 +93,25 @@ offset_top = 20.0
 offset_right = -60.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 52
-text = "Salut moi c crush-san aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaa"
+bbcode_enabled = true
+text = "Salut moi c crush-san [shake]aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa [/shake]aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaa"
 scroll_active = false
 deselect_on_focus_loss_enabled = false
 drag_and_drop_selection_enabled = false
 
 [node name="Nom" type="Panel" parent="DialogueCadre"]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
 offset_left = 50.0
-offset_top = -100.0
-offset_right = -1593.0
+offset_top = -119.0
+offset_right = 774.0
 offset_bottom = -13.0
 grow_horizontal = 2
+mouse_filter = 1
 metadata/_edit_group_ = true
 
 [node name="Name" type="RichTextLabel" parent="DialogueCadre/Nom"]
@@ -100,7 +123,7 @@ offset_left = 10.0
 offset_top = 10.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/normal_font_size = 45
+theme_override_font_sizes/normal_font_size = 70
 text = "Octave Diez
 "
 scroll_active = false
@@ -114,6 +137,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("4_vkxo2")
 
 [node name="Guitare" parent="InstrumentHand" instance=ExtResource("4_v811h")]
@@ -135,3 +159,16 @@ grow_vertical = 2
 
 [node name="DialogueManager" type="Node" parent="."]
 script = ExtResource("7_l0xq6")
+
+[node name="BGManager" type="Node" parent="."]
+script = ExtResource("8_xkgb8")
+
+[node name="CharaManager" type="Node" parent="."]
+script = ExtResource("10_hd6h5")
+
+[node name="FXManager" type="Node" parent="."]
+script = ExtResource("12_ycvk6")
+
+[connection signal="cliked" from="DialogueCadre" to="DialogueManager" method="display_next"]
+[connection signal="mouse_entered" from="DialogueCadre" to="DialogueCadre" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DialogueCadre" to="DialogueCadre" method="_on_mouse_exited"]

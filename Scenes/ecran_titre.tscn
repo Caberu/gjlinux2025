@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://3xsmbr5jdux3"]
+[gd_scene load_steps=10 format=3 uid="uid://3xsmbr5jdux3"]
 
 [ext_resource type="Texture2D" uid="uid://c2em447j3jfes" path="res://Image/Placeholder/TitreBG.png" id="1_ed7h0"]
 [ext_resource type="Texture2D" uid="uid://bnqvo0dtb15tx" path="res://Image/Placeholder/Titre.png" id="2_evswf"]
+[ext_resource type="Texture2D" uid="uid://mwihfd112mvr" path="res://Image/Octave/octave_neutre.png" id="2_jo4se"]
 [ext_resource type="Texture2D" uid="uid://cm06y2wu2e6oq" path="res://Image/Placeholder/TitreGuitare.png" id="3_x1jcq"]
 [ext_resource type="Script" path="res://Scenes/Break.gd" id="4_2tw4h"]
 [ext_resource type="PackedScene" uid="uid://df1siam7f2i50" path="res://Scenes/sound_but.tscn" id="4_f40m5"]
+[ext_resource type="Texture2D" uid="uid://bv5efx0vvsxdk" path="res://Image/Placeholder/GradientFond_Blanc.png" id="4_m8fhf"]
 [ext_resource type="Texture2D" uid="uid://bagk8pjd6s8np" path="res://Image/Placeholder/TitreGuitare_fail.png" id="5_nmthg"]
 [ext_resource type="Script" path="res://Scenes/scene_manager.gd" id="7_trvk7"]
 
@@ -25,20 +27,51 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_ed7h0")
 
+[node name="Octave" type="TextureRect" parent="."]
+modulate = Color(0.934305, 0.793805, 0.999999, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 443.0
+offset_top = 276.0
+offset_right = 169.0
+offset_bottom = 122.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_jo4se")
+expand_mode = 1
+
 [node name="Titre" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -114.0
+offset_top = -24.0
+offset_right = -114.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_evswf")
+
+[node name="Gradient" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.6)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_evswf")
+texture = ExtResource("4_m8fhf")
 
 [node name="Guitare" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -44.0
+offset_right = -44.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_x1jcq")

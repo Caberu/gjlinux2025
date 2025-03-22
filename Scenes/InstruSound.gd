@@ -18,5 +18,6 @@ func load_instru(instru : INSTRU):
 
 
 func play_instru(note : NOTE):
+	Melody.add_note(NOTE.keys()[note])
 	stream = clips[note]
 	play(0)
