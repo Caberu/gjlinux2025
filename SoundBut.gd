@@ -8,15 +8,23 @@ var played := false
 
 signal cliked
 
-var alteration := 0
+var alteration := 0 :
+	get:
+		return alteration
+	set(value):
+		alteration = value
+		if (on_button):
+			Melody.show(note+alteration)
+
 
 func _on_mouse_entered():
 	on_button = true
-
+	Melody.show(note+alteration)
 
 func _on_mouse_exited():
 	on_button = false
 	played = false
+	Melody.hide(note+alteration)
 
 func _ready():
 	$AudioStreamPlayer.load_instru(instrument)

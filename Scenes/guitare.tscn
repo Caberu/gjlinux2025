@@ -34,7 +34,7 @@ offset_top = 107.0
 offset_right = 1312.0
 offset_bottom = 142.0
 rotation = 0.967523
-note = 19
+note = 7
 
 [node name="Alterator" parent="SoundBut" index="1"]
 alter_count = 5
@@ -50,7 +50,6 @@ offset_top = 69.0
 offset_right = 1345.0
 offset_bottom = 104.0
 rotation = 0.967893
-note = 12
 
 [node name="Alterator" parent="SoundBut2" index="1"]
 alter_count = 5
@@ -66,7 +65,7 @@ offset_top = 23.0
 offset_right = 1373.0
 offset_bottom = 58.0
 rotation = 0.96396
-note = 16
+note = 4
 
 [node name="Alterator" parent="SoundBut3" index="1"]
 alter_count = 5
@@ -82,7 +81,7 @@ offset_top = -2.0
 offset_right = 1414.0
 offset_bottom = 33.0
 rotation = 0.962677
-note = 21
+note = 9
 
 [node name="Alterator" parent="SoundBut4" index="1"]
 alter_count = 5
