@@ -21,7 +21,10 @@ func set_fx(fx):
 		$"../BGMManager".play("")
 		Melody.clear()
 		$"../InstrumentHand".uku()
+		$"../InstrumentHand/Portée".crush_decomp = true
 	if (fx == "TROMPETTE"):
 		$"../BGMManager".play("")
 		Melody.clear()
 		$"../InstrumentHand".trompette()
+	if (fx == "ACT"):
+		$"../ACT".show_act($"../DialogueManager".current_dialogue-1)

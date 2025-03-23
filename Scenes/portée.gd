@@ -3,6 +3,8 @@ extends TextureRect
 var note_prefab: PackedScene
 var note_history := []
 var start_portée := 250.0
+var crush_decomp := false
+var decomp := ["etoile","neutre", "cringe", "degout"]
 
 func _ready():
 	note_prefab = load("res://Scenes/note.tscn")
@@ -24,9 +26,17 @@ func _process(delta):
 
 	$VisualizerNote.set_note(Melody.visualized_note)
 	if (Melody.target_melody != null):
+		if (crush_decomp):
+			if (floori(idx/5.0) >= 4):
+				$"..".back_to_date()
+				$"../../DialogueManager".display_next()
+				return
+			$"../../CharaManager".set_bg(decomp[floori(idx/5.0)])
+		
+		
 		if (idx < Melody.target_melody.size()):
 			$Target.set_note(Melody.target_melody[idx])
 		else:
 			if (Melody.check_melody()):
 				$"..".back_to_date()
-				$"../DialogueManager".display_next()
+				$"../../DialogueManager".display_next()

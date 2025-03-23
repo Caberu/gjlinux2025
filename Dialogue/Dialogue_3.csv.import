@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://cfan7sja3h3g7"
+
+[deps]
+
+files=["res://Dialogue/Dialogue_3.BG.translation", "res://Dialogue/Dialogue_3.EXPRESSION.translation", "res://Dialogue/Dialogue_3.FX.translation", "res://Dialogue/Dialogue_3.DIALOGUE.translation"]
+
+source_file="res://Dialogue/Dialogue_3.csv"
+dest_files=["res://Dialogue/Dialogue_3.BG.translation", "res://Dialogue/Dialogue_3.EXPRESSION.translation", "res://Dialogue/Dialogue_3.FX.translation", "res://Dialogue/Dialogue_3.DIALOGUE.translation"]
+
+[params]
+
+compress=true
+delimiter=0

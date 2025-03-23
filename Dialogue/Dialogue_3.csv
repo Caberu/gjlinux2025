@@ -1,0 +1,34 @@
+NOM,BG,EXPRESSION,FX,DIALOGUE
+,noir,absent,reset_music,(C'est une belle journée dehors...)
+Narrateur,,,,"(...Les oiseaux chantent,...)"
+Narrateur,,,,"(...Les fleurs éclosent,...)"
+Narrateur,,,,"(...En des jours comme ça,...)"
+Narrateur,noir,,screenshake,(Vous allez [shake]ÉCHOUER LAMENTABLEMENT[/shake]
+Narrateur,,,,"(Awnnn, vous pensez encore pouvoir y arriver ?...Parfait.)"
+Narrateur,concert,,,(Alors place au [shake]SPECTACLE[/shake])
+,,,ACT,
+Octave,,neutre,reset_music;slide_in,"Salut ! Ça a été la route ? Oui vu que tu es la, passons. Avant le concert, je voulais prendre ce temps rien qu'avec toi, pour te remercier. Pourquoi ? Enfin ! Sans toi je n'aurais pas pu me présenter devant les plus grands noms de ce métier aujourd'hui ! "
+Octave,,etoile,,"C'est aujourd'hui que se [shake]joue ma carrière, mon rêve de gosse et celui des mes ailleux sur plusieurs générations ![/shake]"
+Octave,noir,neutre,,"Aujourd'hui sont aussi présents tous les gens qui ont dit que je n'étais pas capable, pas assez ou bien de trop ! Tous ces gens à qui je vais ENFIN pouvoir montrer les dents, ce que j'ai dans le bide, toute ma passion sans concession !"
+Octave,concert,etoile,,"Maintenant, t'imagines si tu n'étais pas là ? Si j'avais du me coltiner un [wave]LOSER[/wave] plutôt qu'un artiste de talent? Ça aurait été comme...me mettre une balle dans le pied ! Non même PIRE...dans le [shake]COEUR![/shake]"
+Octave,,cringe,,"Nonnnn, tu n'es pas sérieux ? Non évidemment que je n'ai jamais pensé cela à ton sujet ! Oui,...je sais, j'ai pu être un peu dur avec toi par moment mais je me suis vu en toi, tellement fort et rempli de potentiel que j'en ai oublié de lâcher la pression à ton égard."
+Octave ,,,,"Tout ce que je t'ai dis, tous ces moments de partage sur notre passion [shake]COMMUNE[/shake] c'était par admiration..."
+Octave,noir,etoile,,[shake]Aujourd'hui je mise tout sur toi ![/shake]
+Octave,,absent,,"Je veux dire, y'a même des trucs que je ne sais pas faire, je compte sur toi pour me les montrer AUJOURD'HUI!!!"
+MOI,,,,Suis-je mort ?
+Narrateur,,,,"(Vu la posture de merde dans laquelle tu es, ça aurait été préférable, mais non tu t'es juste évanoui de stress, devant ton CRUSH. C'est donc toi le [wave]LOOSER[/wave] dont il parlait plus tôt!"
+Octave,,etoile,,"tout vas bien, tu es en sécurité"
+Octave,,cringe,,Mais tu es sûr d'en être capable ? Être aussi stressé c'est pas très bon signe...
+MOI,,neutre,,OUI ! OUI ! Tout va bien ! Je peux jouer ! 
+Octave,concert,,,"N'oublies pas, tes choix n'impactent pas que toi ce soir..."
+MOI,,,,(Comme tu impactes mon coeur..mais j'ai peur de décevoir le tien.)
+Narrateur,,absent,,"(Je n'en reviens pas, je suis littéralement témoin du plus beau chef d'oeuvre de MA vie ! )"
+Narrateur,,,,"(Regardez-moi cette [shake]tension[/shake], cette [shake]pression[/shake] que vous as IMPOSE Octave sur les épaules, ces émotions [wave]tourmentées[/wave] qui sont en jeu ! Tout ça parce que vous avez préféré vous fantasmer des compétences en mimétique avec votre bien aimé.)"
+Narrateur,,,,"(Seulement, mis à part ce mensonge, que reste t-il ? Qui EST Octave ? Ce lien, si futile, ce bateau de fortune qui vous uni, est tout simplement en train de [wave]sombrer.[/wave])"
+Narrateur,,,,"(Maiiiis assez parlé, ne vous laissez pas distraire ! Continuez votre petit jeu. Pourquoi vous tremblez ? Vous êtes pourtant parfaitement prêt à jouer un mélodie inexistante d'un instrument que vous n'avez JAMAIS touché !)"
+Narrateur,noir,cringe,,[shake](J'AI TELLEMENT HÂTE DE VOIR SON VISAGE SE DÉFORMER DE GÊNE ET DE PITIÉ)[/shake]
+Narrateur ,,absent,,"(Peut-être qu'après cette humiliation, vous me considérerez à ma juste valeur. [wave]Moi qui ai toujours été la, dans les haut, comme pour les bas. Qui, contrairement à Octave, vous ai vu ! Vu pour qui vous êtes, et ai aimé chacune de vos maladresses ou imperfections. C'est ça le véritable amour.)[/wave]"
+MOI,concert,etoile,,"(C'est le moment, ma dernière chance ! Je ne peux plus le décevoir, il y a trop de choses en jeu. Il est temps de se surpasser ! Pour ses beaux yeux...au moins...je veux dire, regardez le plein d'espoir.)"
+,,,UKU,
+Octave,concert,degout,,"VAS T'EN, ÉVENTREUR MÉLODIQUE !"
+Narrateur,noir,degout,,(Vous pensiez SINCÈREMENT qu'il y avait une autre issue? Vous êtes mignon...)

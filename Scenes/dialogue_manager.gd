@@ -6,6 +6,8 @@ var dialogue_array
 
 var can_skip := true
 
+var instru = [InstruSound.INSTRU.Tamtam,InstruSound.INSTRU.Trompette, InstruSound.INSTRU.Uku]
+
 var current_dialogue = 0
 
 func _ready():
@@ -39,10 +41,13 @@ func load_file(path):
 	for c in content:
 		dialogue_array.append(c.split(",",true,4))
 	dialogue_index = 0
+	$AudioStreamPlayer.load_instru(instru[current_dialogue-1])
 	return true
 
 func display_next(skip = 1):
 	if (!can_skip): return
+
+	$AudioStreamPlayer.play_random()
 
 	if (dialogue_index+skip>=dialogue_array.size()):
 		next_dialogue()

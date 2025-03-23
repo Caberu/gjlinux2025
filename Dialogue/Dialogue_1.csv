@@ -1,53 +1,59 @@
 NOM,BG,EXPRESSION,FX,DIALOGUE
-MOI,noir,absent,,"*HIC* je n'étais pas revenu ici depuis...*HIC* notre première rencontre, j'étais sûr que c'était *HIC* le premier...eeeeet le dernier? [wave]C'était mon âme soeur[/wave]. En PLUS on avait la même passion."
-MOI,,,,....En tout cas à partir du moment ou j'ai appris qu'il adorait l'ornithologie (oopsie). POURQUOIEE *hic* il a fallu qu'il me teste !!! il ne l'aurait jamais su!
-Narrateur,bar,neutre,slide_in;reset_music,"(Un bel homme ténébreux de première apparence réservée, se démarque se son groupe de musique qui parait COMME PAR HASARD le soir ou VOUS êtes la.) "
-Narrateur (très bg),,,,"(D'un incomparable talent, il est conscienscieux et prends le temps d'interagir, entre autre visuellement avec son public.)"
-Narrateur (très bg),,,,"Il partage un eyes contact avec vous... mais la tension n'est que dans votre tête, RÉFLÉCHISSEZ, il ne peut rien voir avec des spotlights de cette qualité"
+MOI,noir,absent,,"*HIC* je n'étais pas revenu ici depuis...*HIC* notre première rencontre, j'étais sûr que c'était *HIC* le premier... Eeeeet le dernier? [wave]C'était mon âme soeur[/wave]. En PLUS on avait la même passion."
+MOI,,,,"....En tout cas, à partir du moment ou j'ai appris qu'il adorait l'ornithologie (oopsie). POURQUOIIIII *hic* il a fallu qu'il me teste !!! il ne l'aurait jamais su !"
+Narrateur,bar,neutre,slide_in;reset_music,"(Un bel homme ténébreux de première apparence réservée, se démarque de son groupe de musique qui parait COMME PAR HASARD le soir où VOUS êtes la.) "
+Narrateur (très bg),,,,"(D'un incomparable talent, il est consciencieux et prend le temps d'interagir visuellement avec son public.)"
+Narrateur (très bg),,,,"Il partage un eyes contact avec vous... mais la tension n'est que dans votre tête, RÉFLÉCHISSEZ, il ne peut rien voir avec des spotlights de cette puissance !"
 MOI,noir,absent,screenshake,"[shake]OMAGAAAD[/shake] cet artiste ténébreux me fait carrément oublier *hic* le plus gros chagrin de coeur que je n'ai jamais ressenti, il a tellement de [shake]CHARISME [/shake][wave]<3<3<3"
-MOI,,,,"Après son concert, c'est décidé, je vais lui parler ! mais avant...je vais pratiquer la guindaille 2.0 sinon je vais me taper la WONTE"
+MOI,,,,"Après son concert, c'est décidé, je vais lui parler ! Mais avant...je vais pratiquer la guindaille 2.0 sinon je vais me taper la HONTE !!!"
 Narrateur (celib btw),bar,,,(Le concert se passe bien (sinon ça serait trop chiant à scénariser et j'ai pas que ça à faire !) vous avez bu de l'eau et donc eu un regain de sanité.)
 Narrateur (celib btw),,neutre,,"(Et même semi-sobre l'artiste vous attire toujours autant, et c'est rare !)"
-Narrateur (j'ai un 06!),,,,(L'homme mystérieux prends un verre au bar... C'EST VOTRE CHANCE ! ALLEZ-Y !)
-Narrateur (j'ai un 06!),noir,absent,,"[wave](Moi je reste juste la, dans le coin, seul...)[/wave]"
+Narrateur (j'ai un 06!),,,,(L'homme mystérieux prend un verre au bar... C'EST VOTRE CHANCE ! ALLEZ-Y !)
+Narrateur (j'ai un 06!),noir,absent,,"[wave](Moi je reste juste là, dans le coin, seul...)[/wave]"
 MOI,bar,neutre,,"Salut, toiiiii....."
-MOI,,,,Je pouvais pas m'empêcher de remarquer du bout de la salle qu'on avait un GIGA point en commun !
-?????,,,,A oui? quoi donc? ça m'intrigue 
-MOI,,,,"Baaaaah tu vois, toi, tu respire ? Eh bah MOI AUSSI ! fiiiiiin tu vois où je veux en venir....."
+MOI,,,,Je ne pouvais pas m'empêcher de remarquer du bout de la salle qu'on avait un GIGA point en commun !
+?????,,,,Ah oui ? Quoi donc ? Ça m'intrigue. 
+MOI,,,,"Baaaaah tu vois, toi, tu respires ? Eh bah MOI AUSSI ! Fiiiiiin tu vois où je veux en venir....."
 ?????,,,,Non. Pas vraiment.
 MOI,,,,......
 MOI,,,,Breeeeef c'est quoi ton petit nom?
 Octave (oui je spoil),,,,Octave.
-MOI,,,,"Enchanté. Maintenant qu'on se connait ; ça te tente d'appronfondir le sujet? Toi,...moi, et...heum...un tamtam ? en date?"
-Octave,,etoile,,*Son regard s'illumine soudain* toi aussi tu es passioné de musique ? Je serais ravi de partager un moment avec toi si tel est le cas.
-MOI,,absent,,"Bon. C'est sympas tout ça, un date, avec mon crush, un mec qui est soit-dit en passant EXTREMEMENT BG. Mais... je joues pas du tamtam moi...C'est officiel. J'suis dans la merde."
-Narrateur (coeur brisé),,,,"(Oui. La je suis censé vous faire tout le blabla genre; ohhhh bravoooo vous avez atteint la première étape vers le grand amooouuur mais on a COMPRIS, en fait ! )"
+MOI,,,,"Enchanté. Maintenant qu'on se connait ; ça te tente d'appronfondir le sujet? Toi,...moi, et...heum...un tamtam ? En date?"
+Octave,,etoile,,*Son regard s'illumine soudain* Toi aussi tu es passioné de musique ? Je serais ravi de partager un moment avec toi si tel est le cas.
+Octave,,etoile,,"Mais là je dois rattraper mon groupe, on se voit une prochaine fois !"
+MOI,,,slide_out,Ouais à la prochaaaaine !
+MOI,,absent,tp_in,"Bon. C'est sympa tout ça, un date, avec mon crush, un mec qui est soit-dit en passant EXTREMEMENT BG. Mais... je joue pas du tamtam moi...C'est officiel. J'suis dans la merde."
+Narrateur (coeur brisé),,,,"(Oui. Là je suis censé vous faire tout le blabla genre; Ohhhh bravoooo vous avez atteint la première étape vers le grand amooouuur Mais on a COMPRIS, en fait ! )"
 Narrateur (toujours le coeur brisé),noir,,,([shake]REGARDE MOI PUTAIN![/shake])
+,,,ACT,
 Narrateur (c'est viril de pleurer ok?!),,,,[wave]...[/wave]
-Narrateur (c'est viril de pleurer ok?!),parc,,,[wave] (Nous revoila...c'est le grand jour. Le jour où vous courez dans les bras d'un autre...)[/wave]
-Narrateur (coeur de pierre),,,,"([shake]*sèche ses larmes agressivement*[/shake] Vous arrivez en premier, c'est gênant hein ?! "
-Narrateur (je jubile de votre malheur),,,,(Eh bah !....10 minutes que vous l'attendez déjà ! Je crois que j'ai aperçu un lapin là-bas ! il a été déposé pour vous non? vous croyez pas?)
-Narrateur (je démissionne.),,neutre,,"(J'ai parlé trop vite...il est là, tout fringuaaannt ! QUI dans la VRAIE vie ressemble à CA ! [shake]BONJOUR LE REALISME ![/shake])"
-MOI,,neutre,,Octave! tu es venu! j'avoue que je n'y croyais plus...
+Narrateur (c'est viril de pleurer ok?!),parc,,,[wave] (Nous revoilà...c'est le grand jour. Le jour où vous courez dans les bras d'un autre...)[/wave]
+Narrateur (coeur de pierre),,,,"([shake]*Sèche ses larmes agressivement*[/shake] Vous arrivez en premier, c'est gênant hein ?! "
+Narrateur (je jubile de votre malheur),,,,(Eh bah !....10 minutes que vous l'attendez déjà ! Je crois que j'ai aperçu un lapin là-bas ! Il a été déposé pour vous non? Vous croyez pas?)
+Narrateur (je démissionne.),,neutre,slide_in,"(J'ai parlé trop vite...il est là, tout fringuaaannt ! QUI dans la VRAI vie ressemble à ÇA ! [shake]BONJOUR LE RÉALISME ![/shake])"
+MOI,,neutre,,Octave! Tu es venu! J'avoue que je n'y croyais plus...
 Octave,,,,Oui.
 Octave (gêné),,,,...
 MOI,,,,...
-MOI,noir,absent,,"([shake] Oh non. Tout mais pas ça. Je n'ai pas pris tant de risque pour MAINTENANT ne plus savoir quoi dire ! il faut que je fasse quelque chose....heum...HEUMMM...MAIS OUI!!! LE TAMTAM !!! il faut que je l'impressionne, MAINTENANT!!![/shake])"
-MOI,parc,neutre,reset_music,"Ahem...je sais pas si tu t'en rappelle mais, quand on s'est vus la première fois, hier, je t'ai parlé d'un partage musical, pour te prouver mon amour de la musique j'ai pris...un tamtam, ça te plais ? "
-Octave,,*,,"Oui! biensur que je m'en rappelle! c'était le seul élément intéréssant sur ta personne, sinon j'avoue..je ne me serai jamais retourné sur toi"
-MOI,,,,([wave]Au moins on a la même passion?[/wave])
-MOI,,,,([wave]Ah non...c'est vrai...j'ai juste fais genre pour l'intérésser[/wave])
-Octave,,,,J'ai une idée ! et si tu me jouais quelque chose ? je suis impatient de découvrir ton talent !
-MOI,noir,,,(Il...il ne m'as quand même pas demander de...jouer? [shake]lui montrer le tamtam c'était censé être suffisant?![/shake] qui achèterai un tamtam juste pour le fun ???? c'est la preuve inconditionnelle que je m'y connais ?!!!)
-Octave,,neutre,,Alors? ce morceau?
-MOI,parc,,,"[wave]Ah olalalalalala qu'est que je suis dans la lune moi haha, je pensais JUSTEMENT à quelque chose que j'ai créer pour toi! quel hasaaaard[/wave]"
+MOI,noir,absent,,"([shake] Oh non. Tout mais pas ça. Je n'ai pas pris tant de risque pour MAINTENANT ne plus savoir quoi dire ! Il faut que je fasse quelque chose....heum...HEUMMM...MAIS OUI!!! LE TAMTAM !!! Il faut que je l'impressionne, MAINTENANT!!![/shake])"
+MOI,parc,neutre,reset_music,"Ahem...je sais pas si tu t'en rappelles mais, quand on s'est vus la première fois, hier, je t'ai parlé d'un partage musical, pour te prouver mon amour de la musique j'ai pris...un tamtam, ça te plais ? "
+Octave,,etoile,,"Oui ! Bien sûr que je m'en rappelle ! C'était le seul élément intéressant sur ta personne, sinon j'avoue...je ne me serais jamais retourné sur toi."
+MOI,,,,([wave]Au moins on a la même passion ?[/wave])
+MOI,,,,([wave]Ah non...c'est vrai...j'ai juste fais genre pour l'intéresser[/wave])
+Octave,,,,J'ai une idée ! Et si tu me jouais quelque chose ? Je suis impatient de découvrir ton talent !
+MOI,noir,,,(Il...il ne m'a quand même pas demandé de...jouer ? [shake]Lui montrer le tamtam c'était censé être suffisant ?![/shake] Qui achèterait un tamtam juste pour le fun ???? C'est la preuve inconditionnelle que je m'y connais ?!!!)
+Octave,,neutre,,Alors ? Ce morceau ?
+MOI,parc,,,"[wave]Ah olalalalalala qu'est que je suis dans la lune moi haha, je pensais JUSTEMENT à quelque chose que j'ai créé pour toi ! Quel hasaaaard[/wave]"
 Octave,noir,,,Je t'écoute.
 MOI,,absent,,*ferme les yeux*
 MOI,,,,*respire profondément*
-MOI,parc,neutre,,(Je peux le faire!!)
-,,,TAMTAM,
-Octave,parc,,reset_music,C'était....intéréssant. Tu as une manière bien à toi de jouer.
-,,absent,,"(Ce date était pour le moins...chaotique. Entre un décor ok tiers tout au plus, un crush qui semble plus intéréssé par son reflet que son ~ Rendez-vuuu~, une prestation surprenante d'instrument à percussion et un compte rendu...)"
-Narrateur,,,,(Mitigé? Flou? Sujet à interprétation? Nous avons été tenus en haleine ! et j'espère que la votre est fraîche en cas de second date.)
+MOI,parc,neutre,,(Je peux le faire !!)
+,noir,,TAMTAM,
+Octave,parc,cringe,reset_music,C'était....intéressant. Tu as une manière bien à toi de jouer.
+Octave,,,,...
+Octave,,,,Bon bah... salut.
+MOI,,,slide_out,...
+,,,,"(Ce date était pour le moins...chaotique. Entre un décor ok tiers tout au plus, un crush qui semble plus intéressé par son reflet que son ~ Rendez-vuuu~, une prestation surprenante d'instrument à percussion et un compte rendu...)"
+Narrateur,,absent,tp_in,(Mitigé ? Flou ? Sujet à interprétation ? Nous avons été tenus en haleine ! Et j'espère que la votre est fraîche en cas de second date.)
 Narrateur (rédemption),noir,,,"(Aussi, j'ai bien compris en étant confronté, de FORCE je le précise, au visionnage d'une romance naissante entre vous et cet...homme, j'ai bien compris que vous ne seriez pas disponible émotionnellement sans avoir tout essayé pour acquérir son coeur.)"
 Narrateur (rédemption),,,,"(Mais s'il viens à jeter le vôtre je tiens à vous dire que j'ai fait un stock de freedent, imaginez la fraîcheur!)"

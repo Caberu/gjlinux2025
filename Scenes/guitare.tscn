@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://0du0ix85p0uj"]
+[gd_scene load_steps=4 format=3 uid="uid://0du0ix85p0uj"]
 
 [ext_resource type="PackedScene" uid="uid://df1siam7f2i50" path="res://Scenes/sound_but.tscn" id="2_v2nbq"]
 [ext_resource type="Texture2D" uid="uid://b58i4m5ft5cdc" path="res://Image/Instruments/ukulele.png" id="2_yqcd7"]
+[ext_resource type="Texture2D" uid="uid://cg8q85q4jck5y" path="res://Image/Instruments/ukuleleString.png" id="3_21ecq"]
 
 [node name="Uku" type="TextureRect"]
 anchors_preset = 15
@@ -10,17 +11,18 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+metadata/_edit_lock_ = true
 
 [node name="SoundBut" parent="." instance=ExtResource("2_v2nbq")]
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = -11.0
-offset_top = 107.0
-offset_right = 1312.0
-offset_bottom = 142.0
-rotation = 0.967523
+offset_left = 547.0
+offset_top = 660.0
+offset_right = 1176.0
+offset_bottom = 695.0
+rotation = 1.33671
 note = 7
 
 [node name="Alterator" parent="SoundBut" index="1"]
@@ -32,11 +34,11 @@ layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 22.0
-offset_top = 69.0
-offset_right = 1345.0
-offset_bottom = 104.0
-rotation = 0.967893
+offset_left = 548.0
+offset_top = 562.0
+offset_right = 1368.0
+offset_bottom = 597.0
+rotation = 1.31243
 
 [node name="Alterator" parent="SoundBut2" index="1"]
 alter_count = 5
@@ -47,14 +49,30 @@ layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 50.0
-offset_top = 23.0
-offset_right = 1373.0
-offset_bottom = 58.0
-rotation = 0.96396
+offset_left = 590.0
+offset_top = 577.0
+offset_right = 1277.0
+offset_bottom = 612.0
+rotation = 1.32387
 note = 4
 
 [node name="Alterator" parent="SoundBut3" index="1"]
+alter_count = 5
+input_particle = "UKU3_"
+
+[node name="SoundBut3" parent="SoundBut3" instance=ExtResource("2_v2nbq")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 10.959
+offset_top = -23.0195
+offset_right = 697.959
+offset_bottom = 11.9805
+rotation = -0.0376674
+note = 4
+
+[node name="Alterator" parent="SoundBut3/SoundBut3" index="1"]
 alter_count = 5
 input_particle = "UKU3_"
 
@@ -63,15 +81,15 @@ layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 91.0
-offset_top = -2.0
-offset_right = 1414.0
-offset_bottom = 33.0
-rotation = 0.962677
+offset_left = 571.0
+offset_top = 398.0
+offset_right = 1894.0
+offset_bottom = 433.0
+rotation = 1.30636
 note = 9
 
 [node name="Alterator" parent="SoundBut4" index="1"]
-alter_count = 5
+alter_count = 14
 input_particle = "UKU4_"
 
 [node name="TextureRect2" type="TextureRect" parent="."]
@@ -83,8 +101,21 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 texture = ExtResource("2_yqcd7")
+metadata/_edit_lock_ = true
+
+[node name="TextureRect2" type="TextureRect" parent="TextureRect2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_21ecq")
+metadata/_edit_lock_ = true
 
 [editable path="SoundBut"]
 [editable path="SoundBut2"]
 [editable path="SoundBut3"]
+[editable path="SoundBut3/SoundBut3"]
 [editable path="SoundBut4"]

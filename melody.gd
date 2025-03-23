@@ -31,8 +31,11 @@ func clear():
 	melody_history = []
 
 func show(note):
+	if (note is int):
+		note = InstruSound.NOTE.keys()[note]
+	
 	visualized_note = note
 
 func hide(note):
-	if (visualized_note == note):
+	if (visualized_note == InstruSound.NOTE.keys()[note]):
 		visualized_note = ""

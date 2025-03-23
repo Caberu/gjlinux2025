@@ -33,6 +33,7 @@ func trompette():
 
 func uku():
 	$"../DialogueManager".can_skip = false
+	Melody.target_melody = melody_uku
 	$Tamtam.visible = false
 	$Uku.visible = true
 	$Trompette.visible = false
