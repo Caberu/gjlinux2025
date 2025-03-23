@@ -1,0 +1,105 @@
+[gd_scene load_steps=7 format=3 uid="uid://cpa1672vev0m6"]
+
+[ext_resource type="Script" path="res://SoundBut.gd" id="1_1qqcu"]
+[ext_resource type="Texture2D" uid="uid://f3nqpaeuqt7s" path="res://Image/Instruments/tamtam.png" id="2_higgb"]
+[ext_resource type="AudioStream" uid="uid://c3ypicv4jrjyc" path="res://Image/Placeholder/Up.wav" id="2_tiumn"]
+[ext_resource type="Script" path="res://Scenes/InstruSound.gd" id="3_4oc0a"]
+[ext_resource type="Script" path="res://Scenes/random_alteration.gd" id="4_uxbgx"]
+[ext_resource type="PackedScene" uid="uid://g3jfvqmt4ra3" path="res://Scenes/random_alteration.tscn" id="5_5a2fn"]
+
+[node name="Tamtam" type="TextureRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Edge" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 62.0
+offset_top = 493.0
+offset_right = -1170.0
+offset_bottom = -21.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1qqcu")
+instrument = 1
+note = 28
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Edge"]
+stream = ExtResource("2_tiumn")
+volume_db = 5.0
+script = ExtResource("3_4oc0a")
+
+[node name="RandomAlteration" type="Node" parent="Edge"]
+script = ExtResource("4_uxbgx")
+
+[node name="Millieux" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 218.0
+offset_top = 618.0
+offset_right = -1315.0
+offset_bottom = -241.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1qqcu")
+instrument = 1
+note = 30
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Millieux"]
+stream = ExtResource("2_tiumn")
+volume_db = 5.0
+script = ExtResource("3_4oc0a")
+
+[node name="RandomAlteration" parent="Millieux" instance=ExtResource("5_5a2fn")]
+
+[node name="Main" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 816.0
+offset_top = 396.0
+offset_right = -756.0
+offset_bottom = -133.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1qqcu")
+instrument = 1
+note = 32
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Main"]
+stream = ExtResource("2_tiumn")
+volume_db = 5.0
+script = ExtResource("3_4oc0a")
+
+[node name="RandomAlteration" type="Node" parent="Main"]
+script = ExtResource("4_uxbgx")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_higgb")
+
+[connection signal="mouse_entered" from="Edge" to="Edge" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Edge" to="Edge" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Millieux" to="Millieux" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Millieux" to="Millieux" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Main" to="Main" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Main" to="Main" method="_on_mouse_exited"]

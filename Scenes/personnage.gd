@@ -2,7 +2,7 @@ extends TextureRect
 
 @export var on_screen := false
 
-@export var off_screen_offset = -1920.0
+@export var off_screen_offset = 1920.0
 
 func _ready():
 	position.x = off_screen_offset if not on_screen else 0.0

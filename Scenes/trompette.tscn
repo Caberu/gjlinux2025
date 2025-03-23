@@ -1,0 +1,146 @@
+[gd_scene load_steps=14 format=3 uid="uid://dhoa5b21m3my7"]
+
+[ext_resource type="Texture2D" uid="uid://c32yw4uafsg4u" path="res://Image/Instruments/trompette_vide.png" id="1_5x1r8"]
+[ext_resource type="Script" path="res://SoundBut.gd" id="2_dqi3c"]
+[ext_resource type="AudioStream" uid="uid://c3ypicv4jrjyc" path="res://Image/Placeholder/Up.wav" id="3_4s53e"]
+[ext_resource type="Script" path="res://Scenes/InstruSound.gd" id="4_m1uym"]
+[ext_resource type="Script" path="res://Scenes/uku_alterator.gd" id="5_ar3ve"]
+[ext_resource type="Texture2D" uid="uid://ds1sj12vimcm8" path="res://Image/Instruments/piston_3_releve.png" id="6_bh3ti"]
+[ext_resource type="Script" path="res://Scenes/piston_alterator.gd" id="6_o7rwb"]
+[ext_resource type="Texture2D" uid="uid://56bdg3rxnsp8" path="res://Image/Instruments/piston_2_releve.png" id="7_aqx2l"]
+[ext_resource type="Texture2D" uid="uid://wfgcq5ssq773" path="res://Image/Instruments/piston_3_appuye.png" id="8_2r6ae"]
+[ext_resource type="Texture2D" uid="uid://cobce7gln442b" path="res://Image/Instruments/piston_1_releve.png" id="8_pnf4p"]
+[ext_resource type="Script" path="res://Scenes/piston.gd" id="9_0l7cq"]
+[ext_resource type="Texture2D" uid="uid://bvqgutsjje32e" path="res://Image/Instruments/piston_2_appuye.png" id="10_hmd75"]
+[ext_resource type="Texture2D" uid="uid://cgbq4je7h2eid" path="res://Image/Instruments/piston_1_appuye.png" id="12_pwc70"]
+
+[node name="Trompette" type="TextureRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -224.707
+offset_top = -125.0
+offset_right = -24.707
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_5x1r8")
+
+[node name="SoundBut3" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 893.0
+offset_top = 340.0
+offset_right = 1594.0
+offset_bottom = 672.0
+script = ExtResource("2_dqi3c")
+instrument = 2
+note = 12
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="SoundBut3"]
+stream = ExtResource("3_4s53e")
+volume_db = 5.0
+script = ExtResource("4_m1uym")
+
+[node name="Node" type="Node" parent="SoundBut3"]
+script = ExtResource("5_ar3ve")
+alter_count = 3
+input_particle = "PIS_"
+
+[node name="SoundBut2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.101
+anchor_top = 0.098
+anchor_right = 1.0
+anchor_bottom = 0.959
+offset_left = 778.88
+offset_top = 536.56
+offset_right = -560.0
+offset_bottom = -347.52
+script = ExtResource("2_dqi3c")
+instrument = 2
+note = 7
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="SoundBut2"]
+stream = ExtResource("3_4s53e")
+volume_db = 5.0
+script = ExtResource("4_m1uym")
+
+[node name="Node" type="Node" parent="SoundBut2"]
+script = ExtResource("6_o7rwb")
+alter_count = 3
+input_particle = "PIS_"
+
+[node name="SoundBut1" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1014.0
+offset_top = 916.0
+offset_right = -495.0
+offset_bottom = -115.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_dqi3c")
+instrument = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="SoundBut1"]
+stream = ExtResource("3_4s53e")
+volume_db = 5.0
+script = ExtResource("4_m1uym")
+
+[node name="Node" type="Node" parent="SoundBut1"]
+script = ExtResource("6_o7rwb")
+alter_count = 3
+input_particle = "PIS_"
+
+[node name="Piston3" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("6_bh3ti")
+script = ExtResource("9_0l7cq")
+up = ExtResource("6_bh3ti")
+down = ExtResource("8_2r6ae")
+input = "PIS_3"
+
+[node name="Piston2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("7_aqx2l")
+script = ExtResource("9_0l7cq")
+up = ExtResource("7_aqx2l")
+down = ExtResource("10_hmd75")
+input = "PIS_2"
+
+[node name="Piston1" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("8_pnf4p")
+script = ExtResource("9_0l7cq")
+up = ExtResource("8_pnf4p")
+down = ExtResource("12_pwc70")
+input = "PIS_1"
+
+[connection signal="mouse_entered" from="SoundBut3" to="SoundBut3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SoundBut3" to="SoundBut3" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="SoundBut2" to="SoundBut2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SoundBut2" to="SoundBut2" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="SoundBut1" to="SoundBut1" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SoundBut1" to="SoundBut1" method="_on_mouse_exited"]

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ctjhmrw3nwypw"
-path="res://.godot/imported/BG_parc.png-3bdf07f5417c73f419f3eb812ba103ee.ctex"
+path="res://.godot/imported/BG_Parc.png-efd772a6cffbf653ae7e7f61d0e8cfc2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Image/Backgrounds/BG_parc.png"
-dest_files=["res://.godot/imported/BG_parc.png-3bdf07f5417c73f419f3eb812ba103ee.ctex"]
+source_file="res://Image/Backgrounds/BG_Parc.png"
+dest_files=["res://.godot/imported/BG_Parc.png-efd772a6cffbf653ae7e7f61d0e8cfc2.ctex"]
 
 [params]
 

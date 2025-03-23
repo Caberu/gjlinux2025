@@ -11,3 +11,17 @@ func set_fx(fx):
 		$"../Personnage".tp_in()
 	if (fx == "tp_out"):
 		$"../Personnage".tp_out()
+	if (fx == "reset_music"):
+		$"../BGMManager".reset()
+	if (fx == "TAMTAM"):
+		$"../BGMManager".play("")
+		Melody.clear()
+		$"../InstrumentHand".tamtam()
+	if (fx == "UKU"):
+		$"../BGMManager".play("")
+		Melody.clear()
+		$"../InstrumentHand".uku()
+	if (fx == "TROMPETTE"):
+		$"../BGMManager".play("")
+		Melody.clear()
+		$"../InstrumentHand".trompette()

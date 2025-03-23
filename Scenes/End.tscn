@@ -1,0 +1,139 @@
+[gd_scene load_steps=18 format=3 uid="uid://wml3f3jwtvir"]
+
+[ext_resource type="Script" path="res://Scenes/cam.gd" id="1_effjq"]
+[ext_resource type="Texture2D" uid="uid://c2em447j3jfes" path="res://Image/Placeholder/TitreBG.png" id="2_qxuhg"]
+[ext_resource type="Texture2D" uid="uid://escw1ensvs5u" path="res://Image/Octave/octave_cringe.png" id="3_r7mb8"]
+[ext_resource type="Texture2D" uid="uid://bnqvo0dtb15tx" path="res://Image/Placeholder/Titre.png" id="4_e2e2r"]
+[ext_resource type="Texture2D" uid="uid://bv5efx0vvsxdk" path="res://Image/Placeholder/GradientFond_Blanc.png" id="5_2nrgx"]
+[ext_resource type="Texture2D" uid="uid://b58i4m5ft5cdc" path="res://Image/Instruments/ukulele.png" id="6_4xhel"]
+[ext_resource type="Texture2D" uid="uid://cg8q85q4jck5y" path="res://Image/Instruments/ukuleleString.png" id="7_87reh"]
+[ext_resource type="Script" path="res://Scenes/Break.gd" id="8_xmfou"]
+[ext_resource type="Texture2D" uid="uid://b3tcq6b63a0pt" path="res://Image/Instruments/ukuleleStringbreaking.png" id="9_ylkl4"]
+[ext_resource type="Texture2D" uid="uid://dfg4adxdiea5n" path="res://Image/Instruments/ukuleleStringbroken.png" id="10_ry6o5"]
+[ext_resource type="Script" path="res://SoundBut.gd" id="11_l6kvc"]
+[ext_resource type="AudioStream" uid="uid://c3ypicv4jrjyc" path="res://Image/Placeholder/Up.wav" id="12_hlgsv"]
+[ext_resource type="Script" path="res://Scenes/InstruSound.gd" id="13_c4urf"]
+[ext_resource type="PackedScene" uid="uid://g3jfvqmt4ra3" path="res://Scenes/random_alteration.tscn" id="14_yju38"]
+[ext_resource type="Script" path="res://Scenes/scene_manager.gd" id="15_5habb"]
+[ext_resource type="Script" path="res://Scenes/bouton_start.gd" id="16_f5xci"]
+[ext_resource type="AudioStream" uid="uid://1j36qcu5r85q" path="res://Sounds/Music/Main Theme.wav" id="17_ymngt"]
+
+[node name="EcranTitre" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_effjq")
+
+[node name="BG" type="TextureRect" parent="."]
+modulate = Color(0.192197, 0.192197, 0.192197, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_qxuhg")
+
+[node name="Octave" type="TextureRect" parent="."]
+modulate = Color(0.934305, 0.793805, 0.999999, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 443.0
+offset_top = 276.0
+offset_right = 169.0
+offset_bottom = 122.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_r7mb8")
+expand_mode = 1
+
+[node name="Titre" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -114.0
+offset_top = -24.0
+offset_right = -114.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_e2e2r")
+
+[node name="Gradient" type="TextureRect" parent="."]
+modulate = Color(1, 0, 0, 0.6)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_2nrgx")
+
+[node name="Guitare2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -144.0
+offset_top = -100.0
+offset_right = 56.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_4xhel")
+
+[node name="Guitare" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -44.0
+offset_right = -44.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_87reh")
+script = ExtResource("8_xmfou")
+breaking_tex = ExtResource("9_ylkl4")
+broken_tex = ExtResource("10_ry6o5")
+
+[node name="SoundBut" type="TextureRect" parent="Guitare"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 358.0
+offset_top = 674.0
+offset_right = -1388.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.58551
+script = ExtResource("11_l6kvc")
+note = 26
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Guitare/SoundBut"]
+stream = ExtResource("12_hlgsv")
+volume_db = 5.0
+script = ExtResource("13_c4urf")
+
+[node name="RandomAlteration" parent="Guitare/SoundBut" instance=ExtResource("14_yju38")]
+
+[node name="SceneManager" type="Node" parent="."]
+script = ExtResource("15_5habb")
+
+[node name="BoutonStart" type="Node" parent="."]
+script = ExtResource("16_f5xci")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("17_ymngt")
+autoplay = true
+
+[connection signal="cliked" from="Guitare/SoundBut" to="Guitare" method="_on_sound_but_cliked"]
+[connection signal="mouse_entered" from="Guitare/SoundBut" to="Guitare/SoundBut" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Guitare/SoundBut" to="Guitare/SoundBut" method="_on_mouse_exited"]

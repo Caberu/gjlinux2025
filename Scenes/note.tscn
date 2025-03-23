@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dafqejscyasa2"]
+
+[ext_resource type="Texture2D" uid="uid://df2uw0sm5oqu5" path="res://Image/Notes/Do1.PNG" id="1_rxwne"]
+[ext_resource type="Script" path="res://Scenes/note.gd" id="2_k3w3r"]
+
+[node name="Note" type="TextureRect"]
+offset_left = 386.0
+offset_right = 566.0
+offset_bottom = 238.0
+texture = ExtResource("1_rxwne")
+script = ExtResource("2_k3w3r")

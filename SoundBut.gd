@@ -2,7 +2,6 @@ class_name SoundBut extends TextureRect
 
 @export var instrument : InstruSound.INSTRU
 @export var note : InstruSound.NOTE
-@export var diese := false
 var on_button := false
 var played := false
 

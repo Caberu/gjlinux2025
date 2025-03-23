@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://b62gxsdw273if"]
+[gd_scene load_steps=25 format=3 uid="uid://b62gxsdw273if"]
 
 [ext_resource type="Script" path="res://Scenes/cam.gd" id="1_vurcx"]
 [ext_resource type="Texture2D" uid="uid://brqq6k4s3yttf" path="res://Image/Backgrounds/BG_bar.png" id="1_xhbt4"]
@@ -8,14 +8,22 @@
 [ext_resource type="PackedScene" uid="uid://0du0ix85p0uj" path="res://Scenes/guitare.tscn" id="4_v811h"]
 [ext_resource type="Script" path="res://Scenes/instrument_hand.gd" id="4_vkxo2"]
 [ext_resource type="Script" path="res://Scenes/personnage.gd" id="5_fhvro"]
-[ext_resource type="PackedScene" uid="uid://df1siam7f2i50" path="res://Scenes/sound_but.tscn" id="5_jfbqe"]
 [ext_resource type="Texture2D" uid="uid://dwrhyxotn354k" path="res://Image/portée.png" id="6_j4e7u"]
 [ext_resource type="Script" path="res://Scenes/dialogue_manager.gd" id="7_l0xq6"]
 [ext_resource type="Script" path="res://Scenes/bg_manager.gd" id="8_xkgb8"]
+[ext_resource type="PackedScene" uid="uid://cpa1672vev0m6" path="res://Scenes/tamtam.tscn" id="9_ou0kl"]
 [ext_resource type="Script" path="res://Scenes/chara_manager.gd" id="10_hd6h5"]
+[ext_resource type="Script" path="res://Scenes/portée.gd" id="10_okos2"]
 [ext_resource type="Script" path="res://Scenes/fx_manager.gd" id="12_ycvk6"]
-[ext_resource type="Texture2D" path="res://Image/Notes/note/Mi1.PNG" id="15_qxhip"]
+[ext_resource type="PackedScene" uid="uid://dhoa5b21m3my7" path="res://Scenes/trompette.tscn" id="13_80ebe"]
+[ext_resource type="Script" path="res://SoundBut.gd" id="13_gwhs7"]
+[ext_resource type="AudioStream" uid="uid://c3ypicv4jrjyc" path="res://Image/Placeholder/Up.wav" id="14_q4ny0"]
+[ext_resource type="Script" path="res://Scenes/InstruSound.gd" id="15_3yonm"]
 [ext_resource type="Script" path="res://Scenes/note.gd" id="16_d6a3q"]
+[ext_resource type="Script" path="res://Scenes/random_alteration.gd" id="16_ikd44"]
+[ext_resource type="Texture2D" uid="uid://b7t3dfseec27s" path="res://Image/Notes/note/Group 16/Group 5/Do1.PNG" id="17_06djr"]
+[ext_resource type="Script" path="res://Scenes/bgm_manager.gd" id="18_4wt4w"]
+[ext_resource type="Script" path="res://Scenes/scene_manager.gd" id="18_actbv"]
 
 [node name="Cam" type="Control"]
 layout_mode = 3
@@ -55,6 +63,29 @@ grow_vertical = 2
 texture = ExtResource("3_l1rmk")
 script = ExtResource("5_fhvro")
 
+[node name="Slap" type="TextureRect" parent="Personnage"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1281.0
+offset_top = 216.0
+offset_right = -436.0
+offset_bottom = -715.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("13_gwhs7")
+instrument = 1
+note = 32
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Personnage/Slap"]
+stream = ExtResource("14_q4ny0")
+volume_db = 5.0
+script = ExtResource("15_3yonm")
+
+[node name="RandomAlteration" type="Node" parent="Personnage/Slap"]
+script = ExtResource("16_ikd44")
+
 [node name="GradientMid" type="TextureRect" parent="."]
 modulate = Color(0.652756, 0.234505, 0.489911, 0.533333)
 layout_mode = 1
@@ -63,16 +94,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("2_amxcn")
-
-[node name="Portée" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("6_j4e7u")
 
 [node name="DialogueCadre" type="Panel" parent="."]
 layout_mode = 1
@@ -141,23 +164,59 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("4_vkxo2")
+melody_tamtam = Array[int]([30, 28, 32, 30, 28, 32, 30, 28, 32])
+melody_trompette = Array[int]([0, 0, 2, 4, 5])
+melody_uku = Array[int]([11, 10])
 
-[node name="Guitare" parent="InstrumentHand" instance=ExtResource("4_v811h")]
+[node name="Uku" parent="InstrumentHand" instance=ExtResource("4_v811h")]
+layout_mode = 1
+
+[node name="Trompette" parent="InstrumentHand" instance=ExtResource("13_80ebe")]
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = -160.3
+offset_right = 1895.29
+offset_bottom = 1119.7
 grow_horizontal = 1
 grow_vertical = 1
 
-[node name="SoundBut" parent="." instance=ExtResource("5_jfbqe")]
+[node name="Tamtam" parent="InstrumentHand" instance=ExtResource("9_ou0kl")]
 layout_mode = 1
-offset_left = 1353.0
-offset_top = 198.0
-offset_right = -351.0
-offset_bottom = -684.0
+
+[node name="Portée" type="TextureRect" parent="InstrumentHand"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("6_j4e7u")
+script = ExtResource("10_okos2")
+
+[node name="VisualizerNote" type="TextureRect" parent="InstrumentHand/Portée"]
+modulate = Color(1, 0.166767, 0.836277, 1)
+layout_mode = 0
+offset_left = 386.0
+offset_right = 566.0
+offset_bottom = 238.0
+texture = ExtResource("17_06djr")
+script = ExtResource("16_d6a3q")
+
+[node name="Target" type="TextureRect" parent="InstrumentHand/Portée"]
+modulate = Color(0.35, 0.750833, 1, 0.721569)
+layout_mode = 0
+offset_left = 386.0
+offset_right = 566.0
+offset_bottom = 238.0
+texture = ExtResource("17_06djr")
+script = ExtResource("16_d6a3q")
+
+[node name="SceneManager" type="Node" parent="."]
+script = ExtResource("18_actbv")
 
 [node name="DialogueManager" type="Node" parent="."]
 script = ExtResource("7_l0xq6")
@@ -171,14 +230,14 @@ script = ExtResource("10_hd6h5")
 [node name="FXManager" type="Node" parent="."]
 script = ExtResource("12_ycvk6")
 
-[node name="Note" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = 386.0
-offset_right = 566.0
-offset_bottom = 238.0
-texture = ExtResource("15_qxhip")
-script = ExtResource("16_d6a3q")
+[node name="BGMManager" type="Node" parent="."]
+script = ExtResource("18_4wt4w")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="BGMManager"]
+volume_db = 5.0
+
+[connection signal="mouse_entered" from="Personnage/Slap" to="Personnage/Slap" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Personnage/Slap" to="Personnage/Slap" method="_on_mouse_exited"]
 [connection signal="cliked" from="DialogueCadre" to="DialogueManager" method="display_next"]
 [connection signal="mouse_entered" from="DialogueCadre" to="DialogueCadre" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="DialogueCadre" to="DialogueCadre" method="_on_mouse_exited"]
