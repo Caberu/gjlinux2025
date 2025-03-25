@@ -2,7 +2,7 @@ extends Node
 
 var mus_dic : Dictionary
 
-var mus_name = ["parc", "bar", "intro"]
+var mus_name = ["parc", "bar"]
 
 func _ready():
 	load_music()
@@ -19,7 +19,6 @@ func play(name : String, reset := false):
 		return
 
 	$AudioStreamPlayer.stream = mus_dic[name]
-	print((Time.get_ticks_msec()%ceili($AudioStreamPlayer.stream.get_length()*1000)))
 	$AudioStreamPlayer.play(
 		(Time.get_ticks_msec()%ceili($AudioStreamPlayer.stream.get_length()*1000))/1000.0 
 		if !reset else 0)

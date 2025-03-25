@@ -34,7 +34,7 @@ func load_file(path):
 	var file = FileAccess.open(path, FileAccess.READ)
 	if (file == null):
 		print("no more dialogue")
-		$"../SceneManager".go_to_end()
+		SceneManager.go_to_end()
 		return false
 	var content = file.get_as_text().split("\n")
 	dialogue_array = []

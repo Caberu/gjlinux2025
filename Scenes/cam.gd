@@ -3,7 +3,7 @@ class_name CameraEffects extends Control
 func _process(delta):
 	position = lerp(position, Vector2.ZERO,0.9)
 
-func shake(force, time):
+func shake(force := 20.0, time := 0.1):
 	var start := Time.get_ticks_msec()
 	while (Time.get_ticks_msec() < start+time*1000):
 		shake_once(force)

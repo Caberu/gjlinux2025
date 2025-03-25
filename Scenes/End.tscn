@@ -2,9 +2,10 @@
 
 [ext_resource type="Script" path="res://Scenes/cam.gd" id="1_effjq"]
 [ext_resource type="Texture2D" uid="uid://c2em447j3jfes" path="res://Image/Placeholder/TitreBG.png" id="2_qxuhg"]
-[ext_resource type="Texture2D" uid="uid://escw1ensvs5u" path="res://Image/Octave/octave_cringe.png" id="3_r7mb8"]
+[ext_resource type="Texture2D" uid="uid://bulxtt4fnko8" path="res://Image/Octave/octave_degout.png" id="3_peutm"]
 [ext_resource type="Texture2D" uid="uid://bnqvo0dtb15tx" path="res://Image/Placeholder/Titre.png" id="4_e2e2r"]
 [ext_resource type="Texture2D" uid="uid://bv5efx0vvsxdk" path="res://Image/Placeholder/GradientFond_Blanc.png" id="5_2nrgx"]
+[ext_resource type="PackedScene" uid="uid://c7ynoktfhidpp" path="res://Scenes/scrolling_credits.tscn" id="6_2b6sa"]
 [ext_resource type="Texture2D" uid="uid://b58i4m5ft5cdc" path="res://Image/Instruments/ukulele.png" id="6_4xhel"]
 [ext_resource type="Texture2D" uid="uid://cg8q85q4jck5y" path="res://Image/Instruments/ukuleleString.png" id="7_87reh"]
 [ext_resource type="Script" path="res://Scenes/Break.gd" id="8_xmfou"]
@@ -14,7 +15,6 @@
 [ext_resource type="AudioStream" uid="uid://c3ypicv4jrjyc" path="res://Image/Placeholder/Up.wav" id="12_hlgsv"]
 [ext_resource type="Script" path="res://Scenes/InstruSound.gd" id="13_c4urf"]
 [ext_resource type="PackedScene" uid="uid://g3jfvqmt4ra3" path="res://Scenes/random_alteration.tscn" id="14_yju38"]
-[ext_resource type="Script" path="res://Scenes/scene_manager.gd" id="15_5habb"]
 [ext_resource type="Script" path="res://Scenes/bouton_start.gd" id="16_f5xci"]
 [ext_resource type="AudioStream" uid="uid://1j36qcu5r85q" path="res://Sounds/Music/Main Theme.wav" id="17_ymngt"]
 
@@ -43,13 +43,13 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 443.0
-offset_top = 276.0
-offset_right = 169.0
-offset_bottom = 122.0
+offset_left = 385.0
+offset_top = 273.0
+offset_right = 111.0
+offset_bottom = 119.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_r7mb8")
+texture = ExtResource("3_peutm")
 expand_mode = 1
 
 [node name="Titre" type="TextureRect" parent="."]
@@ -74,6 +74,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("5_2nrgx")
+
+[node name="ScrollingCredits" parent="." instance=ExtResource("6_2b6sa")]
+layout_mode = 1
 
 [node name="Guitare2" type="TextureRect" parent="."]
 layout_mode = 1
@@ -123,9 +126,6 @@ volume_db = 5.0
 script = ExtResource("13_c4urf")
 
 [node name="RandomAlteration" parent="Guitare/SoundBut" instance=ExtResource("14_yju38")]
-
-[node name="SceneManager" type="Node" parent="."]
-script = ExtResource("15_5habb")
 
 [node name="BoutonStart" type="Node" parent="."]
 script = ExtResource("16_f5xci")

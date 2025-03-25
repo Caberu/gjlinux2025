@@ -9,13 +9,12 @@ func add_note(note : String):
 	melody_history.append(note)
 	if (melody_history.size()>20):
 		melody_history.remove_at(0)
-	print(melody_history)
 
 func get_history_note(i):
 	return melody_history[i] if i<melody_history.size() else ""
 
 func check_melody():
-	for i in range(target_melody.size()):
+	for i in range(melody_history.size()):
 		if (melody_history[i] == "Pokd"):
 			melody_history[i] = "Pok"
 		if (melody_history[i] == "Poungd"):

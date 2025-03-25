@@ -13,11 +13,12 @@ func show_act(i : int):
 	$AudioStreamPlayer.stream = audio[i]
 	$AudioStreamPlayer.play(0)
 	
-	await get_tree().create_timer(1).timeout
+	var second_text_time := 3.4
+	await get_tree().create_timer(second_text_time).timeout
 	
 	$TextureRect/TextureRect.texture = titre[i]
 	
-	await get_tree().create_timer($AudioStreamPlayer.stream.get_length()-1).timeout
+	await get_tree().create_timer($AudioStreamPlayer.stream.get_length()-second_text_time+0.5).timeout
 	$TextureRect.visible = false
 	$"../DialogueManager".can_skip = true
 	$"../DialogueManager".display_next()

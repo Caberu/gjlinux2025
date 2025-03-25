@@ -1,5 +1,5 @@
 NOM,BG,EXPRESSION,FX,DIALOGUE
-,,,ACT,
+,noir,,ACT,
 ,noir,absent,,[shake]*BZZZZZZ* *BZZZZZZZ*[/shake]
 MOI,chambre,,,Grmbllmm....[wave]Quoi encore....?[/wave]
 Narrateur ,,,,"(Une notification...QUI EST-CE, dans VISUAL NOVEL ???!!!! QUOI? Octaaave ? Votre love interest? Juuureeee on avait pas TOUS deviné ? Bref, qu'est-ce qu'il veut de bon matin ?)"
@@ -25,7 +25,7 @@ Octave,,cringe,,D'accord....
 Octave,,neutre,,"Passons, montres moi ce que tu sais faire !"
 MOI,,,,"(Allez, c'est mon moment ! Il suffit d'appliquer tout ce que j'ai appris dans mon sommeil !)"
 Narrateur (avec ça il va abandonner c'est sur),noir,absent,,"(Pauvre créature, ne savez-vous donc pas que le taux d'informations retenu par le biais d'écoute pendant le sommeil est à moins de 5% ? Cette préparation était donc quasi nulle, même voir inutile !)"
-,bar,neutre,TROMPETTE,
+MOI,bar,neutre,TROMPETTE,...
 Octave,,cringe,,"On ressent les efforts et le coeur que tu y a mis a l'ouvrage, mais...le résultat n'y correspond pas. Je ne pense pas que tu aie le niveau."
 MOI,,,,"Ah ça ! Mais oui aussi quand tu m'as dis de prendre l'instrument de mon choix j'ai voulu sortir de ma zone de confort, mais de base ma spécialité c'est le ukulélé !"
 Octave ,,etoile,,"Sérieusement ! Et tu m'as caché ça tout ce temps ?! Le ukulélé serait parfait pour nous! Viens avec demain, et on se refait ça !"

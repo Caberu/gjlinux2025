@@ -7,8 +7,8 @@
 [ext_resource type="Script" path="res://Scenes/Break.gd" id="4_2tw4h"]
 [ext_resource type="Texture2D" uid="uid://bv5efx0vvsxdk" path="res://Image/Placeholder/GradientFond_Blanc.png" id="4_m8fhf"]
 [ext_resource type="Texture2D" uid="uid://b58i4m5ft5cdc" path="res://Image/Instruments/ukulele.png" id="5_coof3"]
+[ext_resource type="PackedScene" uid="uid://c7ynoktfhidpp" path="res://Scenes/scrolling_credits.tscn" id="5_exffk"]
 [ext_resource type="Texture2D" uid="uid://cg8q85q4jck5y" path="res://Image/Instruments/ukuleleString.png" id="6_8rorh"]
-[ext_resource type="Script" path="res://Scenes/scene_manager.gd" id="7_trvk7"]
 [ext_resource type="Texture2D" uid="uid://b3tcq6b63a0pt" path="res://Image/Instruments/ukuleleStringbreaking.png" id="8_c670p"]
 [ext_resource type="Texture2D" uid="uid://dfg4adxdiea5n" path="res://Image/Instruments/ukuleleStringbroken.png" id="9_oui13"]
 [ext_resource type="Script" path="res://Scenes/bouton_start.gd" id="10_d43s0"]
@@ -39,7 +39,7 @@ grow_vertical = 2
 texture = ExtResource("1_ed7h0")
 
 [node name="Octave" type="TextureRect" parent="."]
-modulate = Color(0.9335, 0.79, 1, 1)
+modulate = Color(0.981169, 0.942001, 1, 1)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -91,6 +91,9 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("4_m8fhf")
 
+[node name="ScrollingCredits" parent="." instance=ExtResource("5_exffk")]
+layout_mode = 1
+
 [node name="Guitare2" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -141,9 +144,6 @@ volume_db = 5.0
 script = ExtResource("13_13sr3")
 
 [node name="RandomAlteration" parent="Guitare/SoundBut" instance=ExtResource("14_cfy6a")]
-
-[node name="SceneManager" type="Node" parent="."]
-script = ExtResource("7_trvk7")
 
 [node name="BoutonStart" type="Node" parent="."]
 script = ExtResource("10_d43s0")

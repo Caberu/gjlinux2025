@@ -25,7 +25,7 @@ MOI,,,slide_out,Ouais à la prochaaaaine !
 MOI,,absent,tp_in,"Bon. C'est sympa tout ça, un date, avec mon crush, un mec qui est soit-dit en passant EXTREMEMENT BG. Mais... je joue pas du tamtam moi...C'est officiel. J'suis dans la merde."
 Narrateur (coeur brisé),,,,"(Oui. Là je suis censé vous faire tout le blabla genre; Ohhhh bravoooo vous avez atteint la première étape vers le grand amooouuur Mais on a COMPRIS, en fait ! )"
 Narrateur (toujours le coeur brisé),noir,,,([shake]REGARDE MOI PUTAIN![/shake])
-,,,ACT,
+,noir,,ACT,
 Narrateur (c'est viril de pleurer ok?!),,,,[wave]...[/wave]
 Narrateur (c'est viril de pleurer ok?!),parc,,,[wave] (Nous revoilà...c'est le grand jour. Le jour où vous courez dans les bras d'un autre...)[/wave]
 Narrateur (coeur de pierre),,,,"([shake]*Sèche ses larmes agressivement*[/shake] Vous arrivez en premier, c'est gênant hein ?! "
@@ -48,12 +48,12 @@ Octave,noir,,,Je t'écoute.
 MOI,,absent,,*ferme les yeux*
 MOI,,,,*respire profondément*
 MOI,parc,neutre,,(Je peux le faire !!)
-,noir,,TAMTAM,
+MOI,noir,,TAMTAM,...
 Octave,parc,cringe,reset_music,C'était....intéressant. Tu as une manière bien à toi de jouer.
 Octave,,,,...
 Octave,,,,Bon bah... salut.
 MOI,,,slide_out,...
-,,,,"(Ce date était pour le moins...chaotique. Entre un décor ok tiers tout au plus, un crush qui semble plus intéressé par son reflet que son ~ Rendez-vuuu~, une prestation surprenante d'instrument à percussion et un compte rendu...)"
+Narrateur,,,,"(Ce date était pour le moins...chaotique. Entre un décor ok tiers tout au plus, un crush qui semble plus intéressé par son reflet que son ~ Rendez-vuuu~, une prestation surprenante d'instrument à percussion et un compte rendu...)"
 Narrateur,,absent,tp_in,(Mitigé ? Flou ? Sujet à interprétation ? Nous avons été tenus en haleine ! Et j'espère que la votre est fraîche en cas de second date.)
 Narrateur (rédemption),noir,,,"(Aussi, j'ai bien compris en étant confronté, de FORCE je le précise, au visionnage d'une romance naissante entre vous et cet...homme, j'ai bien compris que vous ne seriez pas disponible émotionnellement sans avoir tout essayé pour acquérir son coeur.)"
 Narrateur (rédemption),,,,"(Mais s'il viens à jeter le vôtre je tiens à vous dire que j'ai fait un stock de freedent, imaginez la fraîcheur!)"

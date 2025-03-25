@@ -1,14 +1,40 @@
-[gd_scene format=3 uid="uid://bnft5v4syd83l"]
+[gd_scene load_steps=5 format=3 uid="uid://bnft5v4syd83l"]
+
+[ext_resource type="Script" path="res://Scenes/loading_screen.gd" id="1_7woay"]
+[ext_resource type="Script" path="res://Scenes/SlideTo.gd" id="1_d3bc5"]
+[ext_resource type="Texture2D" uid="uid://bv5efx0vvsxdk" path="res://Image/Placeholder/GradientFond_Blanc.png" id="2_336m0"]
+
+[sub_resource type="Curve" id="Curve_wgc2f"]
+_data = [Vector2(0, 0), 0.0, 2.97133, 0, 0, Vector2(1, 1), 0.111743, 0.0, 0, 0]
+point_count = 2
 
 [node name="LoadingScreen" type="Control"]
+z_index = 2
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_7woay")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1741.0
+offset_bottom = 1741.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_d3bc5")
+time = 0.3
+curve = SubResource("Curve_wgc2f")
+slid_to = false
+metadata/_edit_group_ = true
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -16,3 +42,36 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -186.0
+offset_top = 43.0
+offset_right = 284.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[wave]loading... loading... loading... loading... loading... loading... loading... loading... loading... loading... "
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+modulate = Color(0.329333, 0, 0.38, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_336m0")
+
+[node name="TextureRect2" type="TextureRect" parent="Control"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_top = -1074.0
+offset_right = 1920.0
+offset_bottom = 6.0
+mouse_filter = 2
+texture = ExtResource("2_336m0")

@@ -10,4 +10,4 @@ func _process(delta):
 	for i in range(alter_count):
 		var input = input_particle + str(i+1)
 		if (Input.is_action_pressed(input)):
-			$"..".alteration += piston[i]
+			$"..".alteration -= piston[i]

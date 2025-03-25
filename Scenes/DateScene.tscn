@@ -1,8 +1,9 @@
-[gd_scene load_steps=44 format=3 uid="uid://b62gxsdw273if"]
+[gd_scene load_steps=49 format=3 uid="uid://b62gxsdw273if"]
 
 [ext_resource type="Script" path="res://Scenes/cam.gd" id="1_vurcx"]
-[ext_resource type="Texture2D" uid="uid://brqq6k4s3yttf" path="res://Image/Backgrounds/BG_bar.png" id="1_xhbt4"]
+[ext_resource type="Texture2D" uid="uid://irkcehonbdq8" path="res://Image/Backgrounds/BG_noir.png" id="2_7ui0m"]
 [ext_resource type="Texture2D" uid="uid://bv5efx0vvsxdk" path="res://Image/Placeholder/GradientFond_Blanc.png" id="2_amxcn"]
+[ext_resource type="Texture2D" uid="uid://b7nta0hs7wudg" path="res://Image/Backgrounds/BG_concert.png" id="3_hk108"]
 [ext_resource type="Texture2D" uid="uid://mwihfd112mvr" path="res://Image/Octave/octave_neutre.png" id="3_l1rmk"]
 [ext_resource type="Script" path="res://Scenes/dialogue_cadre.gd" id="4_e80t7"]
 [ext_resource type="PackedScene" uid="uid://0du0ix85p0uj" path="res://Scenes/guitare.tscn" id="4_v811h"]
@@ -18,9 +19,10 @@
 [ext_resource type="Script" path="res://SoundBut.gd" id="13_gwhs7"]
 [ext_resource type="Texture2D" uid="uid://c32yw4uafsg4u" path="res://Image/Instruments/trompette_vide.png" id="13_vl2wm"]
 [ext_resource type="AudioStream" uid="uid://c3ypicv4jrjyc" path="res://Image/Placeholder/Up.wav" id="14_q4ny0"]
-[ext_resource type="Script" path="res://Scenes/uku_alterator.gd" id="14_rq7tc"]
+[ext_resource type="Texture2D" uid="uid://mp4bpw81avmu" path="res://Image/pensebeteTrompette.png" id="14_t5u40"]
 [ext_resource type="Script" path="res://Scenes/InstruSound.gd" id="15_3yonm"]
 [ext_resource type="Script" path="res://Scenes/piston_alterator.gd" id="15_h21on"]
+[ext_resource type="Texture2D" uid="uid://btbfqhfvabap7" path="res://Image/pensebeteUku.png" id="15_lsfo0"]
 [ext_resource type="Texture2D" uid="uid://ds1sj12vimcm8" path="res://Image/Instruments/piston_3_releve.png" id="16_26f58"]
 [ext_resource type="Script" path="res://Scenes/note.gd" id="16_d6a3q"]
 [ext_resource type="Script" path="res://Scenes/random_alteration.gd" id="16_ikd44"]
@@ -28,13 +30,16 @@
 [ext_resource type="Script" path="res://Scenes/piston.gd" id="17_c6gvr"]
 [ext_resource type="Script" path="res://Scenes/bgm_manager.gd" id="18_4wt4w"]
 [ext_resource type="Texture2D" uid="uid://wfgcq5ssq773" path="res://Image/Instruments/piston_3_appuye.png" id="18_28xa1"]
-[ext_resource type="Script" path="res://Scenes/scene_manager.gd" id="18_actbv"]
 [ext_resource type="Texture2D" uid="uid://56bdg3rxnsp8" path="res://Image/Instruments/piston_2_releve.png" id="19_d022o"]
 [ext_resource type="Texture2D" uid="uid://bvqgutsjje32e" path="res://Image/Instruments/piston_2_appuye.png" id="20_8hwow"]
 [ext_resource type="Texture2D" uid="uid://cobce7gln442b" path="res://Image/Instruments/piston_1_releve.png" id="21_qo34d"]
 [ext_resource type="Texture2D" uid="uid://cgbq4je7h2eid" path="res://Image/Instruments/piston_1_appuye.png" id="22_mhlyp"]
 [ext_resource type="Texture2D" uid="uid://dvdxj3c15udv5" path="res://Image/Instruments/souffles.png" id="23_mea0v"]
+[ext_resource type="AudioStream" uid="uid://dcsfk7k3v0fqo" path="res://Sounds/Cringe/Cringe2.wav" id="30_4ukr6"]
+[ext_resource type="AudioStream" uid="uid://d4a1mlclm20cw" path="res://Sounds/pipo-01.wav" id="30_smd03"]
+[ext_resource type="Script" path="res://Scenes/pense_bete.gd" id="31_n64i7"]
 [ext_resource type="PackedScene" uid="uid://xe0h38e74s6q" path="res://Scenes/audio_stream_player.tscn" id="31_nc27t"]
+[ext_resource type="Texture2D" uid="uid://bcbm7wyriektk" path="res://Image/pensebeteTamtam.png" id="32_3knje"]
 [ext_resource type="Script" path="res://Scenes/act.gd" id="36_8kpwx"]
 [ext_resource type="Texture2D" uid="uid://blpmky3n7uasf" path="res://Image/Backgrounds/Act1.png" id="37_80icj"]
 [ext_resource type="Texture2D" uid="uid://584sn5b3c8dd" path="res://Image/Backgrounds/Act2.png" id="38_jwexr"]
@@ -53,6 +58,19 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vurcx")
 
+[node name="noir" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_7ui0m")
+
 [node name="BG" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -60,7 +78,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_xhbt4")
+texture = ExtResource("3_hk108")
 
 [node name="GradientBG" type="TextureRect" parent="."]
 modulate = Color(0.38441, 0.000480826, 0.483384, 1)
@@ -81,6 +99,12 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_l1rmk")
 script = ExtResource("5_fhvro")
+background_modulate = {
+"bar": Color(1, 0.838667, 0.78, 1),
+"concert": Color(1, 0.86, 0.86, 1),
+"noir": Color(1, 1, 1, 1),
+"parc": Color(0.85, 0.95, 1, 1)
+}
 
 [node name="Slap" type="TextureRect" parent="Personnage"]
 layout_mode = 1
@@ -183,6 +207,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("4_vkxo2")
+instrument_pensebete = Array[Texture2D]([ExtResource("32_3knje"), ExtResource("14_t5u40"), ExtResource("15_lsfo0")])
 melody_tamtam = Array[int]([30, 28, 32, 30, 28, 32, 30, 28, 32])
 melody_trompette = Array[int]([2, 5, 9, 12, 14, 17, 14, 10, 9, 7, 5, 2])
 melody_uku = Array[int]([23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 9, 7, 6, 4, 6, 7, 9, 6, 2, 4, 4, 4, 16, 11, 10, 9, 7, 4, 7, 9, 4, 4, 7, 6, 2, 4, 4, 7, 11, 7, 9, 11, 9, 7, 6, 2, 6, 4, 4, 7, 11, 7, 4])
@@ -192,6 +217,7 @@ visible = false
 layout_mode = 1
 
 [node name="Trompette" type="TextureRect" parent="InstrumentHand"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -227,7 +253,7 @@ grow_vertical = 2
 rotation = -0.790656
 script = ExtResource("13_gwhs7")
 instrument = 2
-note = 16
+note = 19
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="InstrumentHand/Trompette/SoundBut4"]
 stream = ExtResource("14_q4ny0")
@@ -235,7 +261,7 @@ volume_db = 5.0
 script = ExtResource("15_3yonm")
 
 [node name="Node" type="Node" parent="InstrumentHand/Trompette/SoundBut4"]
-script = ExtResource("14_rq7tc")
+script = ExtResource("15_h21on")
 alter_count = 3
 input_particle = "PIS_"
 
@@ -252,7 +278,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("13_gwhs7")
 instrument = 2
-note = 12
+note = 16
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="InstrumentHand/Trompette/SoundBut3"]
 stream = ExtResource("14_q4ny0")
@@ -260,7 +286,7 @@ volume_db = 5.0
 script = ExtResource("15_3yonm")
 
 [node name="Node" type="Node" parent="InstrumentHand/Trompette/SoundBut3"]
-script = ExtResource("14_rq7tc")
+script = ExtResource("15_h21on")
 alter_count = 3
 input_particle = "PIS_"
 
@@ -277,7 +303,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("13_gwhs7")
 instrument = 2
-note = 7
+note = 12
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="InstrumentHand/Trompette/SoundBut2"]
 stream = ExtResource("14_q4ny0")
@@ -302,6 +328,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("13_gwhs7")
 instrument = 2
+note = 7
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="InstrumentHand/Trompette/SoundBut1"]
 stream = ExtResource("14_q4ny0")
@@ -410,8 +437,49 @@ offset_bottom = 238.0
 texture = ExtResource("17_06djr")
 script = ExtResource("16_d6a3q")
 
-[node name="SceneManager" type="Node" parent="."]
-script = ExtResource("18_actbv")
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="InstrumentHand/Portée"]
+stream = ExtResource("30_4ukr6")
+volume_db = 5.0
+
+[node name="SlideInAudio" type="AudioStreamPlayer" parent="InstrumentHand"]
+stream = ExtResource("30_smd03")
+volume_db = 5.0
+
+[node name="PenseBete" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1139.0
+offset_right = 1139.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("31_n64i7")
+
+[node name="PenseBete" type="TextureRect" parent="PenseBete"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("32_3knje")
+
+[node name="TextureButton" type="TextureButton" parent="PenseBete"]
+layout_mode = 0
+offset_left = 556.0
+offset_top = 665.0
+offset_right = 741.0
+offset_bottom = 738.0
+
+[node name="TextureButton2" type="TextureButton" parent="PenseBete"]
+offset_left = 792.0
+offset_top = 136.0
+offset_right = 1862.0
+offset_bottom = 826.0
+rotation = 0.11649
 
 [node name="DialogueManager" type="Node" parent="."]
 script = ExtResource("7_l0xq6")
@@ -481,3 +549,5 @@ texture = ExtResource("37_80icj")
 [connection signal="mouse_exited" from="InstrumentHand/Trompette/SoundBut2" to="InstrumentHand/Trompette/SoundBut2" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="InstrumentHand/Trompette/SoundBut1" to="InstrumentHand/Trompette/SoundBut1" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="InstrumentHand/Trompette/SoundBut1" to="InstrumentHand/Trompette/SoundBut1" method="_on_mouse_exited"]
+[connection signal="button_down" from="PenseBete/TextureButton" to="PenseBete" method="ClickAide"]
+[connection signal="button_down" from="PenseBete/TextureButton2" to="PenseBete" method="ClickAide"]

@@ -12,7 +12,6 @@ func _ready():
 	position.x = off_screen_offset if not on_screen else 0.0
 
 func _on_mouse_entered():
-	print("in")
 	on_button = true
 
 
@@ -20,10 +19,9 @@ func _on_mouse_exited():
 	on_button = false
 
 func  _process(delta):
-	if (Input.is_action_just_pressed("click") and on_button):
-		click()
+	#if (Input.is_action_just_pressed("click") and on_button):
+		#click()
 	position.x = lerp(position.x, off_screen_offset if not on_screen else 0.0, 0.1)
 
 func click():
-	print("clickckkc")
 	cliked.emit()

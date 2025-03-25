@@ -1,8 +1,17 @@
 extends Control
 
-@export var on_screen := false
+@export var on_screen := false :
+	get:
+		return on_screen
+	set(value):
+		if (value != on_screen):
+			if (value):
+				$SlideInAudio.play(0)
+		on_screen = value
 
 @export var off_screen_offset = -1920.0
+
+@export var instrument_pensebete : Array[Texture2D]
 
 @export var melody_tamtam : Array[InstruSound.NOTE]
 @export var melody_trompette : Array[InstruSound.NOTE]
@@ -16,6 +25,7 @@ func _process(delta):
 	position.x = lerp(position.x, off_screen_offset if not on_screen else 0.0, 0.1)
 
 func tamtam():
+	$"../PenseBete/PenseBete".texture = instrument_pensebete[0]
 	$"../DialogueManager".can_skip = false
 	Melody.target_melody = melody_tamtam
 	$Tamtam.visible = true
@@ -24,6 +34,7 @@ func tamtam():
 	on_screen = true
 
 func trompette():
+	$"../PenseBete/PenseBete".texture = instrument_pensebete[1]
 	$"../DialogueManager".can_skip = false
 	Melody.target_melody = melody_trompette
 	$Trompette.visible = true
@@ -32,6 +43,7 @@ func trompette():
 	on_screen = true
 
 func uku():
+	$"../PenseBete/PenseBete".texture = instrument_pensebete[2]
 	$"../DialogueManager".can_skip = false
 	Melody.target_melody = melody_uku
 	$Tamtam.visible = false
@@ -45,5 +57,6 @@ func back_to_date():
 	$Tamtam.visible = false
 	$Trompette.visible = false
 	on_screen = false
+	await get_tree().process_frame
 	$"../DialogueManager".can_skip = true
 	

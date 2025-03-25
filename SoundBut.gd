@@ -38,6 +38,5 @@ func  _process(delta):
 
 func click():
 	cliked.emit()
-	print(InstruSound.NOTE.keys()[note+alteration])
 	played = true
 	$AudioStreamPlayer.play_instru(note+alteration)
